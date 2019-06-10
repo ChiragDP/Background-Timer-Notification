@@ -8,7 +8,7 @@ Retrieve build variant name and display on open main activity in text-view using
 Create 5 min timer and show up as single notification while timer running,
 also that force to keep as notification while timer complete.
 
-#Test cases
+# Test cases
 1)-App is in foreground -
 	Test Devices
 	-Samsung J8 (Android Pie-9.0)- working
