@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notification Timer</string>
+    <string name="todo">TODO</string>
+    <string name="timer">Timer</string>
+    <string name="chanel_id">Background notification</string>
+    <string name="time_format">%d min, %d sec</string>
+</resources>

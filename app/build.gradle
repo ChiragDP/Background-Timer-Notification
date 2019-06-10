@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cygnus.notificationtimer"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions 'productFlavors'
+    productFlavors {
+        Production {
+            dimension = 'productFlavors'
+            minSdkVersion 19
+            applicationId = 'com.cygnus.notificationtimer.production'
+            targetSdkVersion 28
+            maxSdkVersion 28
+            signingConfig signingConfigs.debug
+        }
+        QA {
+            dimension = 'productFlavors'
+            minSdkVersion 19
+            applicationId = 'com.cygnus.notificationtimer.qa'
+            targetSdkVersion 28
+            maxSdkVersion 28
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}
